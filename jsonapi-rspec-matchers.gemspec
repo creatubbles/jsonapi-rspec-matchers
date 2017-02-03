@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["dev@creatubbles.com"]
 
   spec.summary       = %q{Easy test json API formatted requests in rspec}
-  spec.description   = %q{This gem is a collection of helpers for requests and controller tests which allows you easly test valid responses, validation errors and so on if your API uses json api format.}
+  spec.description   = %q{This gem is a collection of helpers for requests and controller tests which allows you easily test valid responses, validation errors and so on if your API uses json api format.}
   spec.homepage      = "https://github.com/creatubbles/jsonapi-helpers"
   spec.license       = "MIT"
 
