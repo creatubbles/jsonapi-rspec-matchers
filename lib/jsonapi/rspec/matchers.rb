@@ -1,6 +1,5 @@
 require "jsonapi/rspec/matchers/version"
 require "Jsonapi/rspec/matchers/railtie"
-# require 'rspec'
 
 module Jsonapi
   module RSpec
@@ -14,9 +13,11 @@ module Jsonapi
         match do |given|
           object_data = ActionController::Parameters.new(JSON.parse(given.body))
           object_attrs = ActiveModelSerializers::Adapter::JsonApi::Deserialization.
-            parse(object_data).stringify_keys.tap { |h| h['id'] = h['id'].to_i }
-          expect(object.attributes).to include object_attrs
+            parse(object_data)
+          object_attrs.tap { |h| h[:id] = h[:id].to_i }
+          expect(object).to have_attributes object_attrs.with_indifferent_access
         end
+
         failure_message do |given|
           object_data = ActionController::Parameters.new(JSON.parse(given.body))
           object_attrs = ActiveModelSerializers::Adapter::JsonApi::Deserialization.
@@ -29,4 +30,4 @@ module Jsonapi
   end
 end
 
-::RSpec.configuration.include Jsonapi::RSpec::Matchers
+RSpec.configuration.include Jsonapi::RSpec::Matchers
