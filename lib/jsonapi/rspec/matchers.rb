@@ -1,5 +1,5 @@
 require "jsonapi/rspec/matchers/version"
-require "Jsonapi/rspec/matchers/railtie"
+require "jsonapi/rspec/matchers/railtie"
 
 module Jsonapi
   module RSpec
