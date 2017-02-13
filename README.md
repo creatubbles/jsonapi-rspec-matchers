@@ -7,7 +7,13 @@ This gem allows you  test server responses in JsonAPI format.
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'jsonapi-rspec-matchers', github: 'creatubbles/jsonapi-rspec-matchers'
+group :test do
+  gem 'jsonapi-rspec-matchers', github: 'creatubbles/jsonapi-rspec-matchers', require: false
+end
+
+# spec/spec_helper.rb
+
+require "jsonapi/rspec/matchers"
 ```
 
 And then execute:

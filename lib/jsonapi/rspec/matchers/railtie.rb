@@ -1,3 +1,5 @@
+require 'rails'
+
 module Jsonapi
   module Rspec
     module Matchers
