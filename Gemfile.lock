@@ -53,6 +53,7 @@ GEM
     case_transform (0.2)
       activesupport
     concurrent-ruby (1.0.4)
+    crass (1.0.3)
     diff-lcs (1.3)
     erubis (2.7.0)
     globalid (0.3.7)
@@ -63,7 +64,8 @@ GEM
       jsonapi-renderer (= 0.1.1.beta1)
     jsonapi-parser (0.1.1.beta3)
     jsonapi-renderer (0.1.1.beta1)
-    loofah (2.0.3)
+    loofah (2.2.2)
+      crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
     mail (2.6.4)
       mime-types (>= 1.16, < 4)
@@ -71,11 +73,11 @@ GEM
     mime-types (3.1)
       mime-types-data (~> 3.2015)
     mime-types-data (3.2016.0521)
-    mini_portile2 (2.1.0)
+    mini_portile2 (2.3.0)
     minitest (5.10.1)
     nio4r (1.2.1)
-    nokogiri (1.7.0.1)
-      mini_portile2 (~> 2.1.0)
+    nokogiri (1.8.2)
+      mini_portile2 (~> 2.3.0)
     rack (2.0.1)
     rack-test (0.6.3)
       rack (>= 1.0)
@@ -143,4 +145,4 @@ DEPENDENCIES
   rspec (~> 3.0)
 
 BUNDLED WITH
-   1.14.3
+   1.16.1
